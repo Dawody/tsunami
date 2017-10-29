@@ -24,14 +24,14 @@ int* shmaddr;                  //
 
 int getClk()
 {
-  
+
    	int clk=*shmaddr;
-       return clk;		
+       return clk;
 }
 
 
 /* All process call this function at the begining to establish communication
-between them and the clock module 
+between them and the clock module
 
 Again, Remember that the clock is only emulation
 */
@@ -52,11 +52,11 @@ void initClk()
 
 
 /* All process call this function at the end to release the  communication
-resources between them and the clock module 
+resources between them and the clock module
 
-Again, Remember that the clock is only emulation 
+Again, Remember that the clock is only emulation
 
-input: terminateAll : is a flag to indicate whether that 
+input: terminateAll : is a flag to indicate whether that
 this is the end of simulation it terminates all the system and release resources
 */
 
@@ -66,4 +66,3 @@ void destroyClk(bool terminateAll)
     if(terminateAll)
       killpg(getpgrp(),SIGINT);
 }
-

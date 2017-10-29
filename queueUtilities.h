@@ -34,7 +34,7 @@ struct processData {
    int priority;
    int remainingtime;
    int scdl_algo;  //All processes whitch in the same container MUST have the same scdl_algo . otherwise , unpredictable behaviour will say welcome!
-
+   int pros_pid;
 
     bool operator<(const processData& x)const
     {
@@ -143,4 +143,15 @@ void show_queue(priority_queue<processData> pros_qu){
 
     pros_qu.pop();
   }
+}
+
+
+int str_to_num(string s,int mul){
+if(!s.size())return 0;
+return (s[s.size()-1]-'0')*mul+str_to_num(s.substr(0,s.size()-1),mul*10);
+}
+
+string num_to_str(int x){
+string s=to_string(x);
+return s;
 }

@@ -90,43 +90,57 @@ int main() {
       fscanf(input,"%d",&pros_info);
       pros.priority=pros_info;
 
+      pros.pros_pid=0;
+
       pros.scdl_algo=0;
 
       pros_qu.push(pros);
 
     }
 
-    printf("==========DISPLAY QUEUE IN PROCESSGENERATOR==============\n");
-    show_queue(pros_qu); //:test the input operation and sorting according to arrival time
-    printf("=========================================================\n");
+//test: show all process that i get from the input file sorted by arrival time
+//    printf("==========DISPLAY QUEUE IN PROCESSGENERATOR==============\n");
+//    show_queue(pros_qu); //:test the input operation and sorting according to arrival time
+//    printf("=========================================================\n");
 
 
     //5-Send & Notify the information to  the scheduler at the appropriate time
     //(only when a process arrives) so that it will be put it in its turn.
+    int y=getClk();
+
     while(!pros_qu.empty())
     {
       int x= getClk();
+      if(x==y)
+      {
+        y++;
+        //kill(scdlr_pid,SIGALRM);
+        //printf("PROCESSGENERATOR:ALARM at time = %d\n",x);
+      }
+
       pros=pros_qu.top();
       if(x==pros.arrivaltime)
       {
+
         x= Sendmsg(pros);
-        printf("send process number %d\n",pros.id);
+        printf("PROCESSGENERATOR:send process number %d\n",pros.id);
+        kill(scdlr_pid,SIGFPE);
+        printf("PROCESSGENERATOR:kill signal to process id %d\n",scdlr_pid);
         pros_qu.pop();
       }
     }
 
-    printf("send last send msg...\n");
+//    printf("send last send msg...\n");
     lastSend();
 
     int stat_loc;
-
     wait(&stat_loc);
     if(!(stat_loc & 0x00FF))
-       printf("\nthe schedular dead! %d\n", stat_loc>>8);
+//       printf("\nthe schedular dead! %d\n", stat_loc>>8);
 
 
 
-    printf("the end of processGenerator\n");
+  //  printf("the end of processGenerator\n");
     ClearResources(0);
 
 

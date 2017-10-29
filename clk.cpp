@@ -30,12 +30,12 @@ int main() {
 
  int * shmaddr = (int*) shmat(shmid, (void *)0, 0);
   if((long)shmaddr == -1)
-  {	
+  {
   	perror("Error in attach in parent");
   	exit(-1);
   }
   else
-  {	
+  {
    	*shmaddr = clk;		/* initialize shared memory */
   }
    while(1)
