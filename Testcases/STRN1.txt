@@ -1,0 +1,33 @@
+#At time x process y state arr w total z remain y wait k
+At time 2 process 1 started 2 total 2 remain 2 wait 0
+At time 4 process 1 finished 2 total 2 remain 0 wait 0 TA 2 WTA 1
+At time 6 process 2 started 6 total 9 remain 9 wait 0
+At time 8 process 2 stopped 6 total 9 remain 7 wait 0
+At time 8 process 3 started 8 total 5 remain 3 wait 0
+At time 10 process 3 stopped 8 total 5 remain 3 wait 0
+At time 10 process 4 started 10 total 2 remain 2 wait 0
+At time 12 process 4 finished 10 total 2 remain 0 wait 0 TA 2 WTA 1
+At time 12 process 3 resumed 8 total 5 remain 3 wait 2
+At time 15 process 3 finished 8 total 5 remain 0 wait 2 TA 7 WTA 1.4
+At time 15 process 2 resumed 6 total 9 remain 7 wait 7
+At time 17 process 2 stopped 6 total 9 remain 5 wait 7
+At time 17 process 5 started 17 total 3 remain 3 wait 0
+At time 20 process 5 finished 17 total 3 remain 0 wait 0 TA 3 WTA 1
+At time 20 process 2 resumed 6 total 9 remain 5 wait 10
+At time 25 process 2 finished 6 total 9 remain 0 wait 10 TA 19 WTA 2.11
+At time 25 process 6 started 23 total 5 remain 5 wait 2
+At time 30 process 6 finished 23 total 5 remain 0 wait 2 TA 7 WTA 1.4
+At time 30 process 9 started 28 total 3 remain 3 wait 2
+At time 33 process 9 finished 28 total 3 remain 0 wait 2 TA 5 WTA 1.67
+At time 33 process 7 started 24 total 5 remain 5 wait 9
+At time 38 process 7 finished 24 total 5 remain 0 wait 9 TA 14 WTA 2.8
+At time 38 process 8 started 26 total 5 remain 5 wait 12
+At time 43 process 8 finished 26 total 5 remain 0 wait 12 TA 17 WTA 3.4
+At time 45 process 11 started 45 total 2 remain 2 wait 0
+At time 47 process 11 finished 45 total 2 remain 0 wait 0 TA 2 WTA 1
+At time 47 process 10 started 45 total 3 remain 3 wait 2
+At time 50 process 10 finished 45 total 3 remain 0 wait 2 TA 5 WTA 1.67
+At time 50 process 12 started 45 total 5 remain 5 wait 5
+At time 55 process 12 finished 45 total 5 remain 0 wait 5 TA 10 WTA 2
+At time 55 process 13 started 55 total 5 remain 5 wait 0
+At time 60 process 13 finished 55 total 5 remain 0 wait 0 TA 5 WTA 1

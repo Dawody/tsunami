@@ -1,0 +1,105 @@
+#test0: sample case
+#id arrival runtime priority
+1 1 6 5
+2 3 3 3
+
+#test1:
+#id arrival runtime priority
+1 1 6 5
+
+
+#test2:
+#id arrival runtime priority
+1 1 6 5
+2 3 1 1
+3 5 1 1
+4 7 1 1
+
+
+######################################
+##HPF :
+
+#test3: mainly test your data structure
+#id arrival runtime priority
+1 5 1 2
+2 5 1 2
+3 5 1 2
+4 5 1 2
+5 5 1 2
+6 5 1 2
+
+#test4: mainly test your data structure
+#id arrival runtime priority
+1 1 10 8
+2 2 3 2
+3 4 7 9
+4 10 4 1
+5 12 1 1
+6 13 1 9
+
+#test5: mainly test your data structure
+#id arrival runtime priority
+1 1 2 2
+2 5 3 5
+3 5 2 7
+4 5 1 8
+5 15 3 8
+6 16 1 9
+7 20 1 9
+
+##########################################
+##SRT:
+
+#test6:
+#id arrival runtime priority
+1 1 2 1
+2 2 2 1
+3 3 2 1
+4 4 2 1
+5 5 2 1
+6 6 2 1
+
+
+#test7:
+#id arrival runtime priority
+1 1 6 1
+2 2 5 1
+3 3 4 1
+4 4 3 1
+5 5 2 1
+6 6 1 1
+
+
+#test8:
+#id arrival runtime priority
+1 1 8 1
+2 3 6 1
+3 5 3 1
+4 5 3 1
+5 5 2 1
+6 6 1 1
+
+
+#test9:
+#id arrival runtime priority
+1 6 15 1
+2 7 1 1
+3 8 1 1
+4 19 1 1
+5 19 2 1
+6 20 1 1
+
+
+
+
+####################################################
+##RR:
+
+#test10:
+#id arrival runtime priority
+1 4 4 1
+2 4 4 1
+3 4 4 1
+4 4 4 1
+5 4 4 1
+6 4 4 1
